@@ -8,7 +8,7 @@ class DashboardController < ApplicationController
     @current_day = Date::DAYNAMES[@current_date.wday]
     @next_day = Date::DAYNAMES[@next_date.wday]
 
-    @pet_name = "Corgi Butt"
+    @pet_name = "Porkchop"
 
     @heart_progress = 80
     @happiness_progress = 65
