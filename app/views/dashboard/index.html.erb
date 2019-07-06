@@ -47,7 +47,11 @@ Header
           </div>
           <div class="col-10" style="padding: 0 !important;">
             <div class="progress">
-              <div class="progress-bar" style="width: <%= @heart_progress %>%; background-color: #FECDD3"></div>
+              <% if  DailyTask.count.zero? %>
+                <div class="progress-bar" style="width: 0%; background-color: #FECDD3"></div>
+              <% else %>
+                <div class="progress-bar" style="width: <%= @heart_progress %>%; background-color: #FECDD3"></div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -57,7 +61,11 @@ Header
           </div>
           <div class="col-10" style="padding: 0 !important;">
             <div class="progress">
-              <div class="progress-bar" style="width: <%= @happiness_progress %>%; background-color: #FFE192"></div>
+              <% if  DailyTask.count.zero? %>
+                <div class="progress-bar" style="width: 0%; background-color: #FFE192"></div>
+              <% else %>
+                <div class="progress-bar" style="width: <%= @happiness_progress %>%; background-color: #FFE192"></div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -67,7 +75,11 @@ Header
           </div>
           <div class="col-10" style="padding: 0 !important;">
             <div class="progress">
-              <div class="progress-bar" style="width: <%= @star_progress %>%; background-color: #E4AA19"></div>
+              <% if  DailyTask.count.zero? %>
+                <div class="progress-bar" style="width: 0%; background-color: #E4AA19"></div>
+              <% else %>
+                <div class="progress-bar" style="width: <%= @star_progress %>%; background-color: #E4AA19"></div>
+              <% end %>
             </div>
           </div>
         </div>
