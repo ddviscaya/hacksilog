@@ -21,6 +21,11 @@ Rails.application.config.assets.precompile += %w(
   owl.carousel.min.js
   isotope.pkgd.min.js
   lightbox.min.js
+  font-awesome.min.css
+  animate.min.css
+  ionicons.min.css
+  owl.carousel.min.css
+  lightbox.min.css
   )
 
 # Precompile additional assets.
