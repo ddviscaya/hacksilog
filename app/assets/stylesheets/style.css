@@ -1520,3 +1520,9 @@ h6 {
   color: #fff;
   background-color: #5bc0de;
 }
+
+.funkyradio-disabled input[type="radio"]:checked ~ label:before,
+.funkyradio-disabled input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #474747;
+}
