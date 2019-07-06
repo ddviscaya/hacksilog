@@ -1541,3 +1541,17 @@ h6 {
   transition: 0.5s;
   text-align: center;
 }
+
+.btn-lets-go {
+  background: #33867F;
+  border: 2px solid #33867F;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 125px;
+  transition: 0.5s;
+  text-align: center;
+}

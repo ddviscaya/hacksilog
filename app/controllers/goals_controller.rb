@@ -9,6 +9,11 @@ class GoalsController < ApplicationController
     @current_day = Date::DAYNAMES[@current_date.wday]
     @next_day = Date::DAYNAMES[@next_date.wday]
     @goals = User.last.goals
+
+
+    @heart_progress = 80
+    @happiness_progress = 65
+    @star_progress = 87
   end
 
   def show
@@ -24,7 +29,7 @@ class GoalsController < ApplicationController
     @current_day = Date::DAYNAMES[@current_date.wday]
     @next_day = Date::DAYNAMES[@next_date.wday]
     @categories = Category.all.order(:name)
-    
+
     @heart_progress = 80
     @happiness_progress = 65
     @star_progress = 87
