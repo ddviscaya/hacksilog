@@ -1,0 +1,13 @@
+
+   jquery.min', 'data-turbolinks-track': 'reload' %>
+   jquery-migrate.min', 'data-turbolinks-track': 'reload' %>
+   bootstrap.bundle.min', 'data-turbolinks-track': 'reload' %>
+   easing.min', 'data-turbolinks-track': 'reload' %>
+   mobile-nav.min', 'data-turbolinks-track': 'reload' %>
+   wow.min', 'data-turbolinks-track': 'reload' %>
+   waypoints.min', 'data-turbolinks-track': 'reload' %>
+   counterup.min', 'data-turbolinks-track': 'reload' %>
+   owl.carousel.min', 'data-turbolinks-track': 'reload' %>
+   isotope.pkgd.min', 'data-turbolinks-track': 'reload' %>
+   lightbox.min', 'data-turbolinks-track': 'reload' %>
+   contactform.min', 'data-turbolinks-track': 'reload' %>
