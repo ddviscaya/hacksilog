@@ -24,6 +24,11 @@ class GoalsController < ApplicationController
     @current_day = Date::DAYNAMES[@current_date.wday]
     @next_day = Date::DAYNAMES[@next_date.wday]
     @categories = Category.all.order(:name)
+    
+    @heart_progress = 80
+    @happiness_progress = 65
+    @star_progress = 87
+
     @goal = Goal.new
   end
 
@@ -43,7 +48,7 @@ class GoalsController < ApplicationController
           start_date: start_date + day
         )
       end
-      redirect_to goals_path, notice: "Congratulations, Beautiful! You're now one step closer to achieving your goals."
+      redirect_to dashboard_path, notice: "Congratulations, Beautiful! You're now one step closer to achieving your goals."
 
     end
   end
