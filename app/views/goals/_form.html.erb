@@ -1,0 +1,7 @@
+<%= form_with model: @goal, :html => {:class => 'contactForm'} do |form| %>
+                <%= form.collection_select :category_id, @categories, :id, :name, include_blank: true, :class => 'form-control' %>
+                <%= form.text_field :name, placeholder: "Task", :class => 'form-control' %>
+                <%= form.date_field :start_date, placeholder: "Start Date", :class => 'form-control' %>
+                <%= form.date_field :end_date, placeholder: "End Date", :class => 'form-control' %> 
+                <%= form.submit %>
+              <% end %>

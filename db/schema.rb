@@ -24,26 +24,26 @@ ActiveRecord::Schema.define(version: 2019_07_06_100410) do
 
   create_table "daily_tasks", force: :cascade do |t|
     t.string "name"
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.boolean "done"
-    t.bigint "goals_id"
+    t.bigint "goal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["goals_id"], name: "index_daily_tasks_on_goals_id"
-    t.index ["users_id"], name: "index_daily_tasks_on_users_id"
+    t.index ["goal_id"], name: "index_daily_tasks_on_goal_id"
+    t.index ["user_id"], name: "index_daily_tasks_on_user_id"
   end
 
   create_table "goals", force: :cascade do |t|
     t.string "name"
-    t.bigint "categories_id"
-    t.bigint "users_id"
+    t.bigint "category_id"
+    t.bigint "user_id"
     t.datetime "start_date"
     t.datetime "end_date"
     t.boolean "done"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["categories_id"], name: "index_goals_on_categories_id"
-    t.index ["users_id"], name: "index_goals_on_users_id"
+    t.index ["category_id"], name: "index_goals_on_category_id"
+    t.index ["user_id"], name: "index_goals_on_user_id"
   end
 
   create_table "statuses", force: :cascade do |t|
@@ -63,9 +63,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_100410) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "daily_tasks", "goals", column: "goals_id"
-  add_foreign_key "daily_tasks", "users", column: "users_id"
-  add_foreign_key "goals", "categories", column: "categories_id"
-  add_foreign_key "goals", "users", column: "users_id"
+  add_foreign_key "daily_tasks", "goals"
+  add_foreign_key "daily_tasks", "users"
+  add_foreign_key "goals", "categories"
+  add_foreign_key "goals", "users"
   add_foreign_key "statuses", "users"
 end
