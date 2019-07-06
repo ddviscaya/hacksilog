@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 2019_07_06_100410) do
   create_table "daily_tasks", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id"
-    t.boolean "done"
+    t.boolean "done", default: false
     t.bigint "goal_id"
+    t.datetime "start_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["goal_id"], name: "index_daily_tasks_on_goal_id"

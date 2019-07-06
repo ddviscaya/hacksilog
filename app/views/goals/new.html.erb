@@ -34,51 +34,9 @@ Header
   <!--==========================
     Services Section
   ============================-->
-  <div class="container">
-    <div class="row">
-      <div class="col-4" style="padding: 0 !important;">
-        <img src="https://image.freepik.com/free-vector/funny-corgi-dog-paws-up-white-wall_42750-483.jpg" style="width: 130px;">
-      </div>
-      <div class="col-8">
-        <h4 style="font-family: 'Montserrat', sans-serif; font-size: 16px; color: gray; padding-top: 20px; text-transform: uppercase;"><%= @pet_name %></h4>
-        <div class="row align-items-center">
-          <div class="col-1" style="padding: 0 !important; margin-right: 3px;">
-            <img src="https://img.icons8.com/color/64/000000/like.png" width="20px" style="margin-top: -3px;">
-          </div>
-          <div class="col-10" style="padding: 0 !important;">
-            <div class="progress">
-              <div class="progress-bar" style="width: <%= @heart_progress %>%; background-color: #FECDD3"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-1" style="padding: 0 !important; margin-right: 3px;">
-            <img src="https://img.icons8.com/color/48/000000/smiling.png" width="20px" style="margin-top: -3px;">
-          </div>
-          <div class="col-10" style="padding: 0 !important;">
-            <div class="progress">
-              <div class="progress-bar" style="width: <%= @happiness_progress %>%; background-color: #FFE192"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-1" style="padding: 0 !important; margin-right: 3px;">
-            <img src="https://img.icons8.com/flat_round/64/000000/star.png" width="20px" style="margin-top: -3px;">
-          </div>
-          <div class="col-10" style="padding: 0 !important;">
-            <div class="progress">
-              <div class="progress-bar" style="width: <%= @star_progress %>%; background-color: #E4AA19"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
 
   <section id="services" class="section-bg" style="padding-top: 30 px;">
-    <div class="container" style="padding-bottom: 40px;">
+    <div class="container" style="padding-bottom: 90px;">
       <% if notice -%>
         <p class="alert alert-success"><%= notice %></p>
       <% end -%>
@@ -88,16 +46,21 @@ Header
       <section id="new-goal-form">
         <div class="container-fluid">
 
-          <div class="section-header text-center">
-            <h5>Set your new goal, Beautiful!</h5>
-          </div>
+          <div class="section-header"><center>
+            <img src="https://assets-ouch.icons8.com/preview/182/fbb35fd3-f757-4254-8519-d6da8775a72c.png" style="width: 300px;">
+          </center></div>
 
-          <div class="row wow fadeInUp">
+          <div class="row wow fadeInUp box">
+            <div class="text-center">
+              <h4 style="font-family: Montserrat;">Set your new goal, Beautiful!</h4>
+              <p style="padding-bottom: 30px; color: gray;">Build a new habit, perhaps?</p>
+            </div>
+
               <div class="form align-items-center">
                 <form action="/goals" method="post" role="form" class="contactForm">
                   <div class="form-row align-items-center">
                     <div class="form-group col-lg-6">
-                      <label>Category</label>
+                      <label style="color: #7689BC">Category</label>
                       <select required="true" name="category_id" class="form-control">
                         <option disabled selected value> -- Select a Category -- </option>
                           <%@categories.each do |c|%>
@@ -107,30 +70,30 @@ Header
                       <div class="validation"></div>
                     </div>
                     <div class="form-group col-lg-6">
-                      <label>Goal</label>
-                      <input type="string" class="form-control" name="name" placeholder="Goal"  data-msg="Please enter a valid Goal" required="true" />
+                      <label style="color: #7689BC">Goal</label>
+                      <input type="string" class="form-control" name="name" placeholder="Ex. Be healthier"  data-msg="Please enter a valid Goal" required="true" />
                       <div class="validation"></div>
                     </div>
                     <div class="form-group col-lg-6">
-                      <label>Task</label>
-                      <input type="string" class="form-control" name="task" placeholder="Task"  data-msg="Please enter a valid task" required="true" />
+                      <label style="color: #7689BC">Task</label>
+                      <input type="string" class="form-control" name="task" placeholder="Ex. No junkfood"  data-msg="Please enter a valid task" required="true" />
                       <div class="validation"></div>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label>Start Date</label>
+                    <label style="color: #7689BC">Start Date</label>
                     <input type="date" class="form-control" name="start_date" id="subject" placeholder="Start Date" required="true" />
-                    
+
                     <div class="validation"></div>
                   </div>
                   <div class="form-group">
-                    <label>End Date</label>
+                    <label style="color: #7689BC">End Date</label>
                     <input type="date" class="form-control" name="end_date" id="subject" placeholder="End Date" required="true" />
-                       
+
                     <div class="validation"></div>
                   </div>
-                    
-                  <div class="text-center"><button type="submit" title="Send Message">Create Goal</button></div>
+
+                  <center><button type="submit" title="Send Message" class="btn-get-started">Create Goal</button></center>
 
                 </form>
               </div>
@@ -141,8 +104,6 @@ Header
         </div>
       </section><!-- #new-goal-form -->
 
-      
-      
     </div>
   </section><!-- #services -->
 </main>

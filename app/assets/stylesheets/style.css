@@ -1526,3 +1526,18 @@ h6 {
   color: #fff;
   background-color: #474747;
 }
+
+.btn-get-started {
+  background: #007bff;
+  border: 2px solid #007bff;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 125px;
+  transition: 0.5s;
+  text-align: center;
+}

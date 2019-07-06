@@ -9,4 +9,10 @@ class HomeController < ApplicationController
       format.html { render :interests }
     end
   end
+
+  def social
+    respond_to do |format|
+      format.html { render :social }
+    end
+  end
 end
