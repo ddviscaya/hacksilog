@@ -28,14 +28,10 @@ class GoalsController < ApplicationController
   end
 
   def create
-    binding.pry
     start_date = params[:start_date].to_date
     end_date = params[:end_date].to_date
     if end_date < start_date
-      flash[:error] = "Please check the dates"
-      @categories = Category.all.order(:name)
-      @goal = Goal.new
-      redirect_to new_goal_path
+      redirect_to new_goal_path, alert: "Please check the dates"
     else
       @goal = Goal.create(goal_params)
       days = (end_date - start_date).to_i
@@ -47,8 +43,8 @@ class GoalsController < ApplicationController
           start_date: start_date + day
         )
       end
-      flash[:notice] = "Congratulations, Beautiful! You're now one step closer to achieving your goals."
-      redirect_to goals_path
+      redirect_to goals_path, notice: "Congratulations, Beautiful! You're now one step closer to achieving your goals."
+
     end
   end
 
