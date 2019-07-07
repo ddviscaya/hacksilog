@@ -1,5 +1,6 @@
 class GoalsController < ApplicationController
-  protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
+  # protect_from_forgery with: :null_session
+  protect_from_forgery :except => [:new]
   # skip_before_action :verify_authenticity_token
   def index
     @prev_date = Time.zone.now - 1.day
