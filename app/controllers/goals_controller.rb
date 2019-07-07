@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-  protect_from_forgery
+  skip_before_action :verify_authenticity_token
   def index
     @prev_date = Time.zone.now - 1.day
     @current_date = Time.zone.now
