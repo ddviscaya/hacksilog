@@ -61,6 +61,9 @@ Header
 
               <div class="form align-items-center">
                 <form action="/goals" method="post" role="form" class="contactForm">
+                <input name="authenticity_token"
+                      type="hidden"
+                      value="<%= form_authenticity_token %>"/>
                   <div class="form-row align-items-center">
                     <div class="form-group col-lg-6">
                       <label style="color: #7689BC">Category</label>
